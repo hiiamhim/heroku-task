@@ -42,7 +42,7 @@ const port= process.env.PORT
 //helpful in parsing incoming json request
 app.use(express.json())
 app.listen(port,()=>{
-    console.log(`The server is running at port ${port}`)
+    console.log(`The server is running at port  mm ${port}`)
 })
 
 
