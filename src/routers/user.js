@@ -16,11 +16,15 @@ router.get("/test",(req,res)=>{
 router.post('/users',async(req,res)=>{
    
     const user=new User(req.body)
+    console.log("x")
     
     try{
       await user.save()
+      console.log('y')
       const token =await  user.generateAuthToken()
+      console.log("z")
       sendWelcomeEmail(user.email,user.name)
+     
 
       res.status(200).send({user,token})
 
@@ -58,7 +62,7 @@ router.post("/users/logout",auth,async (req,res)=>{
     req.user.tokens=req.user.tokens.filter((token)=>{
       return token.token!=req.token
     })
-    console.log(req.user.email)
+    
 
     
 
