@@ -11,8 +11,7 @@ sgmail.setApiKey(key)
 // })
 
 const sendWelcomeEmail=(email,name)=>{
-    console.log("l")
-
+ 
 
     sgmail.send({
 
